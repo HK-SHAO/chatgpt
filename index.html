@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<meta name="description" content="使用ChatGPT接口，实现简单HTML网页版在线聊天" />
+<meta name="description" content="使用 OpenAI 接口，实现简单 HTML 网页版在线聊天" />
 
 <head>
     <meta charset="utf-8">
@@ -816,7 +816,7 @@
                     </div>
                 </div>
             </div>
-            <div class="messages">
+            <div class="messages" id="messages">
                 <div id="chatlog"></div>
                 <div id="stopChat"><svg width="24" height="24">
                         <use xlink:href="#stopResIcon" />
@@ -918,7 +918,7 @@
     <script src="//npm.elemecdn.com/markdown-it-link-attributes@4.0.1/dist/markdown-it-link-attributes.min.js"></script>
     <script>
         const API_URL = "/v1/chat/completions";
-        const messagsEle = document.getElementsByClassName("messages")[0];
+        const messagsEle = document.getElementById("messages");
         const chatlog = document.getElementById("chatlog");
         const stopEle = document.getElementById("stopChat");
         const sendBtnEle = document.getElementById("sendbutton");
