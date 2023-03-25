@@ -10,7 +10,6 @@
     <style>
         * {
             box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji" !important;
         }
 
         body {
@@ -2008,11 +2007,11 @@
             controllerId = void 0;
             if (res.status !== 200) {
                 if (res.status === 401) {
-                    alert("API key错误或已失效，请打开设置输入正确的API key！")
+                    alert("API key 错误或已失效，请打开设置输入正确的 API key！")
                 } else if (res.status === 400) {
                     alert("请求内容过大，请删除部分对话或打开设置关闭连续对话！");
                 } else {
-                    alert("触发API调用频率限制，请稍后重试！");
+                    alert("触发 API 调用频率限制，请稍后重试！");
                 }
                 stopLoading();
                 return;
